@@ -2,7 +2,7 @@
 
 ## Requirements
 
-This project relies on [Docker](https://www.docker.com/)which allows for cross platform development using containers. In order to complete this assignment, please install Docker for your respective OS [here](https://docs.docker.com/get-docker/). You'll also need node.js & npm installed.
+This project relies on [Docker](https://www.docker.com/) which allows for cross platform development using containers. In order to complete this assignment, please install Docker for your respective OS [here](https://docs.docker.com/get-docker/). You'll also need node.js & npm installed.
 
 ## Get up and running
 
