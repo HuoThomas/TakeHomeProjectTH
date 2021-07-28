@@ -1,0 +1,216 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger"
+  },
+  "paths": {
+    "/ping": {
+      "get": {
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "required": ["apiVersion", "data"],
+              "properties": {
+                "apiVersion": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "object",
+                  "required": ["ping"],
+                  "properties": {
+                    "ping": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recipes": {
+      "get": {
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Retrieve all recipes",
+            "schema": {
+              "type": "object",
+              "required": ["apiVersion", "data"],
+              "properties": {
+                "apiVersion": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Recipe"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Create a recipe",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RecipeCreate"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful create operation"
+          }
+        }
+      }
+    },
+    "/recipes/{id}": {
+      "get": {
+        "security": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "the recipe id",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieve all recipes",
+            "schema": {
+              "type": "object",
+              "required": ["apiVersion", "data"],
+              "properties": {
+                "apiVersion": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/Recipe"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "the recipe id",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Update a recipe by id",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RecipeCreate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Update recipe by id",
+            "schema": {
+              "type": "object",
+              "required": ["apiVersion", "data"],
+              "properties": {
+                "apiVersion": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/Recipe"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {},
+  "definitions": {
+    "Recipe": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creator": {
+          "$ref": "#/definitions/User"
+        }
+      }
+    },
+    "RecipeCreate": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creator": {
+          "$ref": "#/definitions/User"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
