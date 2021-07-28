@@ -21,10 +21,8 @@
     "elasticsearch": "^16.7.1",
     "express": "^4.17.1",
     "google-libphonenumber": "^3.2.13",
+    "nodemon": "^2.0.4",
     "redis": "^3.1.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
   },
   "author": "",
   "license": "ISC"
