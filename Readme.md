@@ -24,6 +24,9 @@ cd ..
 docker-compose up --build -d
 ```
 
+**NOTE**
+This may take a while but should complete anywhere from 2 - 10 min depending on your computer.
+
 This will build 3 service containers:
 
 - BBQ API
