@@ -12,6 +12,14 @@ Fork this repository by following the steps according to the github docs: [here]
 
 Now that vcs and docker is setup, all that's left to do is build the project:
 
+First, npm install both the api and webapp directories:
+
+```bash
+cd api && npm install
+cd ../webapp && npm install
+cd ..
+```
+
 ```bash
 docker-compose up --build -d
 ```
@@ -59,7 +67,7 @@ docker-compose down
 
 ## Assignment
 
-You are building the Frontend and finishing the backend for a BBQ recipe website, where meat lovers share their recipes with one another.
+You are building the frontend and finishing the backend for a BBQ recipe website, where meat lovers share their recipes with one another.
 
 The api has been partially completed for you and the frontend exercises a couple of api routes just to show connectivity. Your tasks are as follows:
 
