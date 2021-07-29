@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://prototypes.swi.siemens.com/style-guide-disw/css/styleguide.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://prototypes.swi.siemens.com/css/disw-support.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e6652b30a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Pitmaster Blueprints</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="m-t text-slab m-b display-4 text-600">
+        Pitmaster Blueprints
+        <span class="text-700 text-mute text-xl"
+          >A place for lovers of smokey meats.</span
+        >
+      </h1>
+      <hr />
+      <div class="row p-t-lg">
+        <div class="col-md-12">
+          <h2 class="sg-h2">Edit Recipe</h2>
+          <form class="m-b-lg" id="editForm">
+            <fieldset class="form-group">
+              <label for="formGroupExampleInput" class="text-600">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                placeholder="Recipe Title"
+                value="Sweet Spicy Saint Louis Spare Ribs"
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="formGroupExampleInput" class="text-600"
+                >Description</label
+              >
+              <textarea
+                rows="3"
+                class="form-control"
+                id="formGroupExampleInput"
+              >
+Saint Louis cut spare ribs slow smoked with Pecan and Apple Wood.</textarea
+              >
+            </fieldset>
+            <div class="flex-row m-b">
+              <div class="form-group flex-row-item">
+                <label class="text-sm text-600 m-b-xs">Creator Name</label>
+                <input class="form-control" type="text" value="Micah Zakahi" />
+              </div>
+              <div class="form-group flex-row-item">
+                <label class="text-sm text-600 m-b-xs">Creator Email</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  value="micah.zakahi@siemens.com"
+                />
+              </div>
+            </div>
+            <fieldset class="form-group">
+              <label for="formGroupExampleInput" class="text-600"
+                >Directions</label
+              >
+              <ol id="directionList">
+                <li>
+                  <div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      style="width: 98%; display: inline"
+                      value="Remove ribs from package and pat dry"
+                    />
+                    <a href="#" class="trashMe">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Remove the membrane from the back of the ribs"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Apply sweet spicy dry rub generously to all sides and put back in fridge for 1-4 hours"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Preheat smoker to 225"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Smoke ribs for 3 hours and remove ribs when the meat is starting to pull back from the bone"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Add brown sugar and honey to one side of the ribs and wrap in aluminum foil"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Place back on smoker for about 2 hours"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Remove from foil and sauce with favorite bbq sauce"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Put back on smoker and allow sauce to thicken on ribs"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Probe meat after 30 min, consistency should feel like going through butter"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Pull from smoker and let them rest for at least 15 min"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <input
+                    class="form-control"
+                    type="text"
+                    style="width: 98%; display: inline"
+                    value="Cut and Enjoy"
+                  />
+                  <a href="#" class="trashMe">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </li>
+              </ol>
+              <div style="padding-left: 1.25rem">
+                <a href="#" class="btn btn-info" id="addStep">Add Step</a>
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="formGroupExampleInput" class="text-600">Tags</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                placeholder="Tags"
+                value="ribs, apple, pecan, pork"
+              />
+              <small class="text-muted"
+                >Enter comma separated list of tags</small
+              >
+            </fieldset>
+            <div class="pull-right m-b-lg">
+              <input type="submit" value="Submit" class="btn btn-info" />
+            </div>
+            <div class="pull-right m-b-lg">
+              <a href="detail.html" class="btn btn-link">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $("#addStep").on("click", function (e) {
+          $("#directionList").append(
+            '<li><input class="form-control" type="text" style="width: 98%; display: inline;" placeholder="Enter Recipe Step" value=""/>&nbsp;<a href="#" class="trashMe"><i class="fas fa-trash-alt"></i></a></li>'
+          );
+          e.preventDefault();
+        });
+        $("#directionList li a").on("click", function (e) {
+          $(this).parent("li").remove();
+          e.preventDefault();
+        });
+        $("#editForm").submit(function (e) {
+          window.location = "detail.html?submitted=true";
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

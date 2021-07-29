@@ -74,6 +74,9 @@ The api has been partially completed for you and the frontend exercises a couple
 1. Create two new api routes, one for updating a recipe and one for creating a recipe. Refer to the swagger spec (./api/resources/swagger.json) as a guide to follow. It has the routes you're to create spec'd out there but not actually implemented.
 2. Our team does not create UI/UX on our own, instead we refer to designers and a UX team for prototyping. You'll be given a hi-fi prototype (./prototypes/index.html) and will be tasked with making it a react reality.
 
+**IMPORTANT**
+Do not bring in the jQuery library into react as found in the prototypes. You should be able to do everything in React itself.
+
 ## Submitting the assignment
 
 Reach out to us when you've pushed your final commit and are ready for us to review it. Have fun!

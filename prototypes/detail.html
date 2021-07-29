@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://prototypes.swi.siemens.com/style-guide-disw/css/styleguide.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://prototypes.swi.siemens.com/css/disw-support.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e6652b30a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Pitmaster Blueprints</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="m-t text-slab m-b display-4 text-600">
+        Pitmaster Blueprints
+        <span class="text-700 text-mute text-xl"
+          >A place for lovers of smokey meats.</span
+        >
+      </h1>
+      <hr />
+      <a href="index.html" class="btn btn-link">
+        <i class="fas fa-long-arrow-alt-left"></i>
+        Back to all Recipes
+      </a>
+      <div class="alert alert-success display-none" id="success">
+        Recipe Successfully Updated! 
+      </div>
+      <div class="row p-t-lg">
+        <div class="col-md-12">
+          <div class="media m-b m-md-b-0">
+            <div class="media-left">
+              <div
+                class="circle-outline circle-outline-lg display-1 text-muted"
+              >
+                <i class="icon fas fa-utensils"></i>
+              </div>
+            </div>
+            <div class="media-body">
+              <h1 class="display-2 text-600 m-b-xs">
+                Sweet Spicy Saint Louis Spare Ribs
+              </h1>
+              <b class="text-muted text-uc text-sm">Micah Zakahi</b>
+              <span class="text-pipe text-xs">|</span>
+              <span class="text-mute text-xs">micah.zakahi@siemens.com</span>
+              <span class="text-pipe text-xs">|</span>
+              <span class="text-mute text-xs">Updated Jun 1, 2020</span>
+              <div>
+                <span class="label label-gray m-r-sm">ribs</span>
+                <span class="label label-gray m-r-sm">apple</span>
+                <span class="label label-gray m-r-sm">pecan</span>
+                <span class="label label-gray m-r-sm">pork</span>
+              </div>
+            </div>
+            <div class="pull-right">
+              <a class="btn btn-info" href="edit.html">
+                <i class="fas fa-edit"></i>
+                Edit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row p-t-lg">
+        <div class="col-md-12">
+          <h2>Description</h2>
+          <p class="text-md m-b-0">
+            Saint Louis cut spare ribs slow smoked with Pecan and Apple Wood.
+          </p>
+        </div>
+      </div>
+      <div class="row p-t-lg">
+        <div class="col-md-12">
+          <h2>Directions</h2>
+          <p class="text-md m-b-0">
+            <ol>
+              <li>
+                Remove ribs from package and pat dry
+              </li>
+              <li>
+                Remove the membrane from the back of the ribs
+              </li>
+              <li>
+                Apply sweet spicy dry rub generously to all sides and put back in fridge for 1-4 hours
+              </li>
+              <li>
+                Preheat smoker to 225
+              </li>
+              <li>
+                Smoke ribs for 3 hours and remove ribs when the meat is starting to pull back from the bone
+              </li>
+              <li>
+                Add brown sugar and honey to one side of the ribs and wrap in aluminum foil
+              </li>
+              <li>
+                Place back on smoker for about 2 hours
+              </li>
+              <li>
+                Remove from foil and sauce with favorite bbq sauce
+              </li>
+              <li>
+                Put back on smoker and allow sauce to thicken on ribs
+              </li>
+              <li>
+                Probe meat after 30 min, consistency should feel like going through butter
+              </li>
+              <li>
+                Pull from smoker and let them rest for at least 15 min
+              </li>
+              <li>
+                Cut and Enjoy
+              </li>
+            </ol>
+          </p>
+        </div>
+      </div>
+      <!-- <div class="sg-section p-t-lg" id="sg-about">
+        <h2 style="margin-bottom: 0.5rem">
+          Sweet Spicy Saint Louis Spare Ribs
+        </h2>
+        <div>
+          <span class="label label-gray">ribs</span>
+          <span class="label label-gray">apple</span>
+          <span class="label label-gray">pecan</span>
+          <span class="label label-gray">pork</span>
+        </div>
+        <hr />
+        <div class="row"></div>
+      </div> -->
+    </div>
+    <script>
+      $(function() {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+        if (params.submitted === "true") {
+          $("#success").removeClass("display-none")
+        }
+      });
+    </script>
+  </body>
+</html>
