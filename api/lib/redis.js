@@ -27,7 +27,7 @@ exports.setHashKeys = values => {
 exports.setHashKey = (name, value) => {
   return new Promise((resolve, reject) => {
     const redisClient = redis.createClient({ host: config.redis.endpoint });
-    redisClient.hget(config.redis.recipeHkey, name, value, (err, data) => {
+    redisClient.hset(config.redis.recipeHkey, name, value, (err, data) => {
       redisClient.quit();
       if (err) return reject(err);
       return resolve(data);

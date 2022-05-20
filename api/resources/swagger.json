@@ -71,8 +71,20 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "successful create operation"
+          "201": {
+            "description": "successful create operation",
+            "schema": {
+              "type": "object",
+              "required": ["apiVersion", "data"],
+              "properties": {
+                "apiVersion": {
+                  "type": "string"
+                },
+                "data": {
+                  "$ref": "#/definitions/Recipe"
+                }
+              }
+            }
           }
         }
       }
