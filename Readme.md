@@ -73,7 +73,8 @@ docker-compose down
 You are building the frontend and finishing the backend for a BBQ recipe website, where meat lovers share their recipes with one another.
 
 The backend datastore is using redis since it's fairly easily understood and easy to use. Here is the npm redis package we use: https://github.com/redis/node-redis. The main functions that are used are: hmset, hget, hset, hgetall.
-**hint** There is a redis.js module in the lib folder with a lot of the data access patterns that can be reused.
+
+**HINT** There is a redis.js module in the lib folder with a lot of the data access patterns that can be reused.
 
 The api has been partially completed for you and the frontend exercises a couple of api routes just to show connectivity. Your tasks are as follows:
 
