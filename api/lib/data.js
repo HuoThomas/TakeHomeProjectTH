@@ -1,4 +1,5 @@
-const { getAllHkeys, getHkey } = require('../lib/redis');
+const { getAllHkeys, getHkey, setHashKey } = require('../lib/redis');
+const { v4: uuidv4 } = require('uuid');
 
 exports.getAllRecipes = async () => {
   const recipes = await getAllHkeys();
@@ -10,4 +11,14 @@ exports.getAllRecipes = async () => {
 exports.getRecipeById = async id => {
   const recipe = await getHkey(id);
   return JSON.parse(recipe);
+}
+
+exports.putRecipeById = async (id, data) => {
+  await setHashKey(id, JSON.stringify({ ...data, id }));
+}
+
+exports.createRecipe = async data => {
+  const uuid = uuidv4();
+  await setHashKey(uuid, JSON.stringify(data));
+  return uuid;
 }

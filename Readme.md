@@ -74,7 +74,7 @@ You are building the frontend and finishing the backend for a BBQ recipe website
 
 The backend datastore is using redis since it's fairly easily understood and easy to use. Here is the npm redis package we use: https://github.com/redis/node-redis. The main functions that are used are: hmset, hget, hset, hgetall.
 
-**HINT** There is a redis.js module in the lib folder with a lot of the data access patterns that can be reused.
+**HINT** There is a redis.js module in the lib folder with a lot of the data access patterns that can be reused. There is also a data service layer that contains some useful helper functions (lib/data.js) that can be utilized.
 
 The api has been partially completed for you and the frontend exercises a couple of api routes just to show connectivity. Your tasks are as follows:
 
