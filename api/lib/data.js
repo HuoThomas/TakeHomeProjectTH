@@ -14,11 +14,11 @@ exports.getRecipeById = async id => {
 }
 
 exports.putRecipeById = async (id, data) => {
-  await setHashKey(id, JSON.stringify({ ...data, id }));
+  await setHashKey(id, JSON.stringify({id, ...data}));
 }
 
 exports.createRecipe = async data => {
   const uuid = uuidv4();
-  await setHashKey(uuid, JSON.stringify(data));
+  await setHashKey(uuid, JSON.stringify({id: uuid, ...data}));
   return uuid;
 }

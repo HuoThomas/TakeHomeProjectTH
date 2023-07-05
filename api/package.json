@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "seed_win": "set REDIS_ENDPOINT=localhost ; node ./seed/seed.js",
     "seed_db": "REDIS_ENDPOINT=localhost node ./seed/seed.js",
     "dev": "nodemon -r dotenv/config index.js"
   },
@@ -21,10 +22,12 @@
     "elasticsearch": "^16.7.1",
     "express": "^4.17.1",
     "google-libphonenumber": "^3.2.13",
-    "nodemon": "^2.0.4",
     "redis": "^3.1.2",
     "uuid": "^8.3.2"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
