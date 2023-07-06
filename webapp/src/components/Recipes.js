@@ -24,7 +24,7 @@ function Recipes(props) {
       <div className="sg-section p-t-lg" id="sg-about">
         <div>
           <div className="pull-right" style={{position: 'relative',zIndex: '1000'}}>
-            <Link to="/create" >
+            <Link to="/edit/create" >
               <button className="btn btn-info">
                 <i className="fas fa-plus"></i>
                 Create Recipe

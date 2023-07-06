@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { getAllRecipes, putRecipe, getRecipeById } from '../actions/recipe';
+import { getAllRecipes, putRecipe, getRecipeById, postRecipe } from '../actions/recipe';
 
 function Edit(props) {
     const [recipe, setRecipe] = useState({
@@ -40,9 +40,27 @@ function Edit(props) {
         })
     }
 
+    const submissionHandler = (id, recipe) => {
+        if(id === "create"){
+            postRecipe(recipe).then(
+                window.location.assign("/")
+            )
+        }
+        else{
+            putRecipe(id, recipe).then(
+                window.location.assign("/detail/" + id + "?submitted=true")
+            )
+        }
+    }   
+
     useEffect(() => {
+        if(id !== "create"){
         getRecipeById(id)
             .then(res => setRecipe(res));
+        }
+        else{
+            console.log("No change");
+        }
     }, []);
 
     return (
@@ -167,9 +185,8 @@ function Edit(props) {
                             >
                         </fieldset>
                         <div className="pull-right m-b-lg">
-                            <Link to={`/detail/${id}`}>
-                                <input onClick={() => putRecipe(id, recipe).then(newId => { console.log(newId) })}
-                                    type="submit" value="Submit" className="btn btn-info" /></Link>
+                            <input onClick={() => submissionHandler(id, recipe)}
+                                type="button" value="Submit" className="btn btn-info" />
                         </div>
                         <div className="pull-right m-b-lg">
                             <Link to="/" className="btn btn-link">Cancel</Link>

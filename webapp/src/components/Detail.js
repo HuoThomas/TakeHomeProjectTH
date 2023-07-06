@@ -7,7 +7,10 @@ import moment from 'moment';
 function Detail(props) {
   const [currentRecipe, setCurrentRecipe] = useState({});
   const { id } = useParams();
-  const { success } = useParams();
+  let success = false;
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  success = params.submitted;
 
   useEffect(() => {
     getRecipeById(id)
@@ -29,14 +32,14 @@ function Detail(props) {
         >
       </h1>
       <hr />
+      <div className={`alert alert-success ${success ? "" : "display-none"}`} id="success">
+        Recipe Successfully Updated!
+      </div>
       <Link to="/" className="btn btn-link">
         <i className="fas fa-long-arrow-alt-left"></i>
         Back to all Recipes
       </Link>
-      <div className="alert alert-success display-none" id="success">
-        Recipe Successfully Updated! 
-      </div>
-
+      
       <div className="row p-t-lg">
         <div className="col-md-12">
           <div className="media m-b m-md-b-0">
